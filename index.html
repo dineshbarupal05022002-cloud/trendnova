@@ -1,26 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TrendNova - International Online Store</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-<h1>TrendNova</h1>
-<p>International Online Store</p>
-</header>
-
 <section>
-<h2>Welcome to TrendNova</h2>
-<p>Shop the best products at the best prices.</p>
-<button>Shop Now</button>
-</section>
+  <h2>Welcome to TrendNova</h2>
+  <p>Discover Trending Products From Around the World</p>
 
-<script src="script.js"></script>
+  <div class="products">
+    <div class="card">
+      <h3>Wireless Earbuds</h3>
+      <p>$29.99</p>
+      <button>Buy Now</button>
+    </div>
 
-</body>
-</html>
+    <div class="card">
+      <h3>Smart Watch</h3>
+      <p>$49.99</p>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h3>Gaming Mouse</h3>
+      <p>$19.99</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+</section>.products{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.card{
+  background:#222;
+  padding:20px;
+  border:2px solid #FFD700;
+  border-radius:10px;
+  width:220px;
+  text-align:center;
+}
+
+.card h3{
+  color:#FFD700;
+}
