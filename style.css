@@ -60,3 +60,40 @@ button:hover{
   color:#FFD700;
   font-size:20px;
 }
+
+.hero{
+  background: linear-gradient(135deg,#0d6efd,#3b82f6);
+  color:white;
+  text-align:center;
+  padding:60px 20px;
+  border-radius:15px;
+  margin:20px;
+}
+
+.hero h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.hero-features{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.hero button{
+  background:white;
+  color:#0d6efd;
+  border:none;
+  padding:12px 25px;
+  font-size:18px;
+  border-radius:8px;
+  cursor:pointer;
+}
