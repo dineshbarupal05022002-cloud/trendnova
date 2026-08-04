@@ -47,5 +47,7 @@ function removeFromCart(index) {
 }
 
 function checkout() {
-  alert("Thank you for shopping at TrendNova!");
+  document.getElementById("order").scrollIntoView({
+    behavior: "smooth"
+  });
 }
