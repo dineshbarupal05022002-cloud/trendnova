@@ -1,35 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const button = document.querySelector("button");
-
-  button.addEventListener("click", function () {
-    alert("Welcome to TrendNova! Products will be added soon.");
-  });
+  const button = document.querySelector(".hero button");
+  if (button) {
+    button.addEventListener("click", function () {
+      alert("Welcome to TrendNova!");
+    });
+  }
 });
-
 
 let cart = [];
 
 function addToCart(productName) {
   cart.push(productName);
-
   document.getElementById("cart-count").innerText = cart.length;
-
   alert(productName + " added to cart!");
 }
 
 function showCart() {
-  let cartBox = document.getElementById("cart-items");
+  const cartBox = document.getElementById("cart-items");
 
   if (cart.length === 0) {
-    cartBox.innerHTML = "<h3>Your Cart is Empty!</h3>";
+    cartBox.innerHTML = "<h3>🛒 Your Cart is Empty!</h3>";
     return;
   }
 
-  let html = "<h2>🛒 Your Cart</h2><ul>";
+  let html = "<h3>🛒 Your Cart</h3><ul>";
 
   cart.forEach(function(item, index) {
     html += "<li>" + item +
-" <button onclick='removeFromCart(" + index + ")'>❌ Remove</button></li>";
+      " <button onclick='removeFromCart(" + index + ")'>❌ Remove</button></li>";
   });
 
   html += "</ul>";
@@ -39,8 +37,6 @@ function showCart() {
 
 function removeFromCart(index) {
   cart.splice(index, 1);
-
   document.getElementById("cart-count").innerText = cart.length;
-
   showCart();
 }
