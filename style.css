@@ -198,3 +198,15 @@ nav a{
     font-size:12px;
     font-weight:bold;
 }
+
+.product-images{
+  display: flex;
+  gap: 8px;
+}
+
+.product-images img{
+  width: 48%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
