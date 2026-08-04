@@ -24,13 +24,18 @@ function showCart() {
   }
 
   let html = "<h3>🛒 Your Cart</h3><ul>";
+let total = 0;
 
   cart.forEach(function(item, index) {
     html += "<li>" + item +
       " <button onclick='removeFromCart(" + index + ")'>❌ Remove</button></li>";
   });
 
-  html += "</ul>";
+  total = cart.length * 19.99;
+
+html += "</ul>";
+html += "<h3>Total: $" + total.toFixed(2) + "</h3>";
+html += "<button onclick='checkout()'>💳 Checkout</button>";
 
   cartBox.innerHTML = html;
 }
@@ -39,4 +44,8 @@ function removeFromCart(index) {
   cart.splice(index, 1);
   document.getElementById("cart-count").innerText = cart.length;
   showCart();
+}
+
+function checkout() {
+  alert("Thank you for shopping at TrendNova!");
 }
