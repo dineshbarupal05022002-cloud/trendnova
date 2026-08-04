@@ -51,3 +51,5 @@ function checkout() {
     behavior: "smooth"
   });
 }
+
+cartBox.innerHTML = html;
