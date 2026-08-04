@@ -38,7 +38,9 @@
 <div class="top-bar">
 <input type="text" placeholder="Search products...">
 <button>🔍 Search</button>
-<a href="#">🛒 Cart (<span id="cart-count">0</span>)</a>
+<a href="#" onclick="showCart()">
+  🛒 Cart (<span id="cart-count">0</span>)
+</a>
 </div>
 
 <section>
@@ -139,5 +141,5 @@ function setProduct(productName) {
 
   </form>
   </section>
-
+ <div id="cart-items"></div>
   </body>
