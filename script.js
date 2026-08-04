@@ -27,11 +27,20 @@ function showCart() {
 
   let html = "<h2>🛒 Your Cart</h2><ul>";
 
-  cart.forEach(function(item) {
-    html += "<li>" + item + "</li>";
+  cart.forEach(function(item, index) {
+    html += "<li>" + item +
+" <button onclick='removeFromCart(" + index + ")'>❌ Remove</button></li>";
   });
 
   html += "</ul>";
 
   cartBox.innerHTML = html;
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+
+  document.getElementById("cart-count").innerText = cart.length;
+
+  showCart();
 }
