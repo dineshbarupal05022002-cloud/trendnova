@@ -210,3 +210,21 @@ nav a{
   object-fit: cover;
   border-radius: 10px;
 }
+
+.cart-btn{
+  background:#ff9900;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.buy-btn{
+  background:#28a745;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:8px;
+  cursor:pointer;
+}
