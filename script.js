@@ -81,3 +81,19 @@ function searchProducts() {
     }
   });
 }
+
+function filterProducts() {
+  let category = document.getElementById("categoryFilter").value;
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(function(card) {
+    if (
+      category === "all" ||
+      card.getAttribute("data-category") === category
+    ) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
