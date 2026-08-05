@@ -261,3 +261,17 @@ nav a{
   border-top: 1px solid #ddd;
   margin: 10px 0;
   }
+
+.filter-box{
+  text-align:center;
+  margin:20px 0;
+}
+
+#categoryFilter{
+  padding:10px 15px;
+  font-size:16px;
+  border:2px solid #FFD700;
+  border-radius:8px;
+  background:#fff;
+  cursor:pointer;
+}
