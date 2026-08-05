@@ -275,3 +275,44 @@ nav a{
   background:#fff;
   cursor:pointer;
 }
+
+/* Product Popup */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: #fff;
+  color: #000;
+  width: 90%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+  color: red;
+}
+
+#modalPrice {
+  color: green;
+  font-size: 22px;
+  font-weight: bold;
+  }
