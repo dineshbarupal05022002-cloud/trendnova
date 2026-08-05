@@ -52,4 +52,10 @@ function checkout() {
   });
 }
 
-cartBox.innerHTML = html;
+function setProduct(productName, price) {
+    document.getElementById("product").value = productName;
+    document.getElementById("price").value = price;
+    document.getElementById("order").scrollIntoView({
+        behavior: "smooth"
+    });
+}
