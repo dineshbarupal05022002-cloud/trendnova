@@ -45,7 +45,32 @@
   🛒 Cart (<span id="cart-count">0</span>)
 </a>
 </div>
+
+ <div class="top-bar">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="🔍 Search products..."
+    onkeyup="searchProducts()">
+  <button>🔍 Search</button>
+  <a href="#" onclick="showCart()">
+    🛒 Cart (<span id="cart-count">0</span>)
+  </a>
+</div>
   
+<div class="filter-box">
+  <select id="categoryFilter" onchange="filterProducts()">
+    <option value="all">📦 All Categories</option>
+    <option value="electronics">🎧 Electronics</option>
+    <option value="beauty">💄 Beauty</option>
+    <option value="home">🏠 Home</option>
+    <option value="fashion">👕 Fashion</option>
+  </select>
+</div>
+
+<div id="cart-items"></div>
+
+<section id="products"> 
 <div id="cart-items"></div>
   
 <section id="products">
