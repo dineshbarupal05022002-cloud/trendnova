@@ -35,7 +35,11 @@
 </nav>
 
 <div class="top-bar">
-<input type="text" placeholder="Search products...">
+<input
+  type="text"
+  id="searchInput"
+  placeholder="🔍 Search products..."
+  onkeyup="searchProducts()">
 <button>🔍 Search</button>
 <a href="#" onclick="showCart()">
   🛒 Cart (<span id="cart-count">0</span>)
