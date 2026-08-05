@@ -66,3 +66,18 @@ function setProduct(productName, price) {
         behavior: "smooth"
     });
 }
+
+function searchProducts() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(function(card) {
+    let name = card.querySelector("h3").textContent.toLowerCase();
+
+    if (name.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
