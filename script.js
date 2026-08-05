@@ -55,6 +55,11 @@ function checkout() {
 function setProduct(productName, price) {
     document.getElementById("product").value = productName;
     document.getElementById("price").value = price;
+
+    document.getElementById("summaryProduct").innerText = productName;
+    document.getElementById("summaryPrice").innerText = price;
+    document.getElementById("summaryTotal").innerText = price;
+
     document.getElementById("order").scrollIntoView({
         behavior: "smooth"
     });
