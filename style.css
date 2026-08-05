@@ -228,3 +228,28 @@ nav a{
   border-radius:8px;
   cursor:pointer;
 }
+
+.order-summary {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.order-summary h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.order-summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.order-summary hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+  }
