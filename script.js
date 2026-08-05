@@ -97,3 +97,16 @@ function filterProducts() {
     }
   });
 }
+
+function openModal(title, price, description, image) {
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalPrice").innerText = price;
+  document.getElementById("modalDescription").innerText = description;
+  document.getElementById("modalImage").src = image;
+
+  document.getElementById("productModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("productModal").style.display = "none";
+    }
