@@ -47,6 +47,8 @@ function removeFromCart(index) {
 }
 
 function checkout() {
+  alert("✅ Thank you for your order!\n\nYour order has been placed successfully.\nWe will contact you soon.");
+
   document.getElementById("order").scrollIntoView({
     behavior: "smooth"
   });
