@@ -49,11 +49,16 @@ function showCart() {
   let total = 0;
 
   cart.forEach(function(item, index) {
-    total += item.price;
+    total += item.price * item.quantity;
 
     html += "<li>" +
       item.name +
       " - $" + item.price.toFixed(2) +
+      " × " + item.quantity +
+      " " +
+      "<button onclick='decreaseQuantity(" + index + ")'>➖</button>" +
+      " " +
+      "<button onclick='increaseQuantity(" + index + ")'>➕</button>" +
       " <button onclick='removeFromCart(" + index + ")'>❌ Remove</button>" +
       "</li>";
   });
