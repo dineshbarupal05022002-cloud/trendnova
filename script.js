@@ -10,12 +10,27 @@ document.addEventListener("DOMContentLoaded", function () {
 let cart = [];
 
 function addToCart(productName, price) {
-  cart.push({
-    name: productName,
-    price: parseFloat(price.replace("$", ""))
+  const existingItem = cart.find(function(item) {
+    return item.name === productName;
   });
 
-  document.getElementById("cart-count").innerText = cart.length;
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({
+      name: productName,
+      price: parseFloat(price.replace("$", "")),
+      quantity: 1
+    });
+  }
+
+  let totalQuantity = 0;
+
+  cart.forEach(function(item) {
+    totalQuantity += item.quantity;
+  });
+
+  document.getElementById("cart-count").innerText = totalQuantity;
 
   alert(productName + " added to cart!");
 
