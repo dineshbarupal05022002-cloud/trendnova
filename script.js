@@ -111,7 +111,28 @@ function removeFromCart(index) {
 }
 
 function checkout() {
-  alert("✅ Thank you for your order!\n\nYour order has been placed successfully.\nWe will contact you soon.");
+  if (cart.length === 0) {
+    alert("🛒 Your Cart is Empty!");
+    return;
+  }
+
+  let productNames = [];
+  let total = 0;
+
+  cart.forEach(function(item) {
+    productNames.push(item.name + " x " + item.quantity);
+    total += item.price * item.quantity;
+  });
+
+  let products = productNames.join(", ");
+  let totalPrice = "$" + total.toFixed(2);
+
+  document.getElementById("product").value = products;
+  document.getElementById("price").value = totalPrice;
+
+  document.getElementById("summaryProduct").innerText = products;
+  document.getElementById("summaryPrice").innerText = totalPrice;
+  document.getElementById("summaryTotal").innerText = totalPrice;
 
   document.getElementById("order").scrollIntoView({
     behavior: "smooth"
