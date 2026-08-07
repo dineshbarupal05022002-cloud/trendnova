@@ -9,10 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let cart = [];
 
-function addToCart(productName) {
-  cart.push(productName);
+function addToCart(productName, price) {
+  cart.push({
+    name: productName,
+    price: parseFloat(price.replace("$", ""))
+  });
+
   document.getElementById("cart-count").innerText = cart.length;
+
   alert(productName + " added to cart!");
+
+  showCart();
 }
 
 function showCart() {
@@ -24,20 +31,31 @@ function showCart() {
   }
 
   let html = "<h3>🛒 Your Cart</h3><ul>";
-let total = 0;
+  let total = 0;
 
   cart.forEach(function(item, index) {
-    html += "<li>" + item +
-      " <button onclick='removeFromCart(" + index + ")'>❌ Remove</button></li>";
+    total += item.price;
+
+    html += "<li>" +
+      item.name +
+      " - $" + item.price.toFixed(2) +
+      " <button onclick='removeFromCart(" + index + ")'>❌ Remove</button>" +
+      "</li>";
   });
 
-  total = cart.length * 19.99;
-
-html += "</ul>";
-html += "<h3>Total: $" + total.toFixed(2) + "</h3>";
-html += "<button onclick='checkout()'>💳 Checkout</button>";
+  html += "</ul>";
+  html += "<h3>Total: $" + total.toFixed(2) + "</h3>";
+  html += "<button onclick='checkout()'>💳 Checkout</button>";
 
   cartBox.innerHTML = html;
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+
+  document.getElementById("cart-count").innerText = cart.length;
+
+  showCart();
 }
 
 function removeFromCart(index) {
