@@ -205,8 +205,11 @@ onclick="openModal('Gaming Mouse','$19.99','High precision gaming mouse.','57860
 
     <p id="modalDescription"></p>
 
-    <button onclick="addToCart(document.getElementById('modalTitle').innerText)">
-      🛒 Add to Cart
+    <button onclick="addToCart(
+  document.getElementById('modalTitle').innerText,
+  document.getElementById('modalPrice').innerText
+)">
+  🛒 Add to Cart
     </button>
   </div>
 </div>
