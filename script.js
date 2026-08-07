@@ -73,6 +73,32 @@ function removeFromCart(index) {
   showCart();
 }
 
+function increaseQuantity(index) {
+  cart[index].quantity += 1;
+
+  document.getElementById("cart-count").innerText =
+    cart.reduce(function(total, item) {
+      return total + item.quantity;
+    }, 0);
+
+  showCart();
+}
+
+function decreaseQuantity(index) {
+  if (cart[index].quantity > 1) {
+    cart[index].quantity -= 1;
+  } else {
+    cart.splice(index, 1);
+  }
+
+  document.getElementById("cart-count").innerText =
+    cart.reduce(function(total, item) {
+      return total + item.quantity;
+    }, 0);
+
+  showCart();
+  }
+
 function removeFromCart(index) {
   cart.splice(index, 1);
   document.getElementById("cart-count").innerText = cart.length;
