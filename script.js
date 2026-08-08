@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let cart = [];
 
+let productStock = {
+  "Pet Hair Remover Roller": 25,
+  "Wireless Earbuds": 20,
+  "Smart Watch": 15,
+  "Gaming Mouse": 30
+};
 
 // ===============================
 // UPDATE CART COUNT
@@ -30,6 +36,17 @@ function addToCart(productName, price) {
   const existingItem = cart.find(function (item) {
     return item.name === productName;
   });
+
+  const currentQuantity = existingItem
+    ? existingItem.quantity
+    : 0;
+
+  const availableStock = productStock[productName] || 0;
+
+  if (currentQuantity >= availableStock) {
+    alert("❌ Sorry! " + productName + " is out of stock.");
+    return;
+  }
 
   if (existingItem) {
     existingItem.quantity += 1;
