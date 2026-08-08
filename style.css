@@ -357,3 +357,104 @@ nav a{
     transform: translateX(0);
   }
   }
+
+/* ===============================
+   PROFESSIONAL CART DESIGN
+================================ */
+
+#cart-items {
+  width: 90%;
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 20px;
+  background: #ffffff;
+  color: #111;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+}
+
+#cart-items h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+#cart-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+#cart-items li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#cart-items li button {
+  border: none;
+  border-radius: 7px;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#cart-items li button:hover {
+  opacity: 0.8;
+}
+
+#cart-items > button {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 15px auto 5px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #ff9900;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#cart-items > button:hover {
+  background: #e68a00;
+}
+
+#cart-items h3:last-of-type {
+  text-align: right;
+  margin-top: 18px;
+  color: #111;
+}
+
+
+/* ===============================
+   MOBILE CART
+================================ */
+
+@media (max-width: 600px) {
+
+  #cart-items {
+    width: 92%;
+    padding: 15px;
+  }
+
+  #cart-items li {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #cart-items li button {
+    padding: 6px 9px;
+  }
+
+  #cart-items h3 {
+    font-size: 20px;
+  }
+  }
