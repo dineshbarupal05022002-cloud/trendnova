@@ -18,6 +18,47 @@ let productStock = {
 };
 
 // ===============================
+// UPDATE STOCK DISPLAY
+// ===============================
+function updateStockDisplay() {
+  const stockElements = {
+    "Pet Hair Remover Roller": "stock-pet",
+    "Wireless Earbuds": "stock-earbuds",
+    "Smart Watch": "stock-watch",
+    "Gaming Mouse": "stock-mouse"
+  };
+
+  Object.keys(productStock).forEach(function (productName) {
+    const elementId = stockElements[productName];
+    const element = document.getElementById(elementId);
+
+    if (!element) return;
+
+    const cartItem = cart.find(function (item) {
+      return item.name === productName;
+    });
+
+    const quantityInCart = cartItem
+      ? cartItem.quantity
+      : 0;
+
+    const remainingStock =
+      productStock[productName] - quantityInCart;
+
+    if (remainingStock <= 0) {
+      element.innerText = "🔴 Out of Stock";
+      element.style.color = "red";
+    } else {
+      element.innerText =
+        "🟢 In Stock — " +
+        remainingStock +
+        " available";
+
+      element.style.color = "#168a3a";
+    }
+  });
+      }
+// ===============================
 // UPDATE CART COUNT
 // ===============================
 function updateCartCount() {
