@@ -129,10 +129,25 @@ function removeFromCart(index) {
 
 
 // ===============================
-// INCREASE QUANTITY
+// INCREASE QUANTITY WITH STOCK CHECK
 // ===============================
 function increaseQuantity(index) {
-  cart[index].quantity += 1;
+  const item = cart[index];
+
+  const availableStock = productStock[item.name] || 0;
+
+  if (item.quantity >= availableStock) {
+    alert(
+      "❌ Stock limit reached!\n\n" +
+      item.name +
+      "\nOnly " +
+      availableStock +
+      " available."
+    );
+    return;
+  }
+
+  item.quantity += 1;
 
   updateCartCount();
 
