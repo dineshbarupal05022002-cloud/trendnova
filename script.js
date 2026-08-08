@@ -104,6 +104,7 @@ function addToCart(productName, price) {
   alert(productName + " added to cart!");
 
   showCart();
+  updateStockDisplay();
 }
 
 
@@ -193,6 +194,7 @@ function increaseQuantity(index) {
   updateCartCount();
 
   showCart();
+  updateStockDisplay();
 }
 
 
@@ -209,6 +211,7 @@ function decreaseQuantity(index) {
   updateCartCount();
 
   showCart();
+  updateStockDisplay();
 }
 
 
