@@ -550,3 +550,22 @@ nav a{
     font-size: 14px;
   }
 }
+
+/* Stock Information */
+
+.stock-info {
+  color: #168a3a;
+  font-weight: bold;
+  font-size: 14px !important;
+  margin: 8px 0 !important;
+}
+
+.checkout-btn {
+  background: #ff9900 !important;
+  color: #111 !important;
+  font-weight: bold;
+}
+
+.checkout-btn:hover {
+  background: #e68a00 !important;
+}
