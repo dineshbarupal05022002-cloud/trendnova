@@ -192,7 +192,6 @@ function increaseQuantity(index) {
   item.quantity += 1;
 
   updateCartCount();
-
   showCart();
   updateStockDisplay();
 }
