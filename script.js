@@ -226,14 +226,20 @@ function checkout() {
   let total = 0;
 
   cart.forEach(function (item) {
+    let itemTotal = item.price * item.quantity;
+
     productNames.push(
-      item.name + " × " + item.quantity
+      item.name +
+      " × " +
+      item.quantity +
+      " = $" +
+      itemTotal.toFixed(2)
     );
 
-    total += item.price * item.quantity;
+    total += itemTotal;
   });
 
-  let products = productNames.join(", ");
+  let products = productNames.join("\n");
   let totalPrice = "$" + total.toFixed(2);
 
   // Form
@@ -241,9 +247,14 @@ function checkout() {
   document.getElementById("price").value = totalPrice;
 
   // Order Summary
-  document.getElementById("summaryProduct").innerText = products;
-  document.getElementById("summaryPrice").innerText = totalPrice;
-  document.getElementById("summaryTotal").innerText = totalPrice;
+  document.getElementById("summaryProduct").innerText =
+    products;
+
+  document.getElementById("summaryPrice").innerText =
+    totalPrice;
+
+  document.getElementById("summaryTotal").innerText =
+    totalPrice;
 
   // Go to checkout section
   document.getElementById("order").scrollIntoView({
