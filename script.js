@@ -371,7 +371,7 @@ function closeModal() {
     "none";
   }
 
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   updateCartCount();
   showCart();
   updateStockDisplay();
