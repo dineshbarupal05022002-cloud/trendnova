@@ -193,6 +193,7 @@ function increaseQuantity(index) {
   item.quantity += 1;
 
   updateCartCount();
+  localStorage.setItem("trendNovaCart", JSON.stringify(cart));
   showCart();
   updateStockDisplay();
 }
@@ -209,6 +210,7 @@ function decreaseQuantity(index) {
   }
 
   updateCartCount();
+  localStorage.setItem("trendNovaCart", JSON.stringify(cart));
 
   showCart();
   updateStockDisplay();
