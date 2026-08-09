@@ -370,3 +370,9 @@ function closeModal() {
   document.getElementById("productModal").style.display =
     "none";
   }
+
+document.addEventListener("DOMContentLoaded", function () {
+  updateCartCount();
+  showCart();
+  updateStockDisplay();
+});
