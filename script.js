@@ -165,6 +165,7 @@ function removeFromCart(index) {
   cart.splice(index, 1);
 
   updateCartCount();
+  localStorage.setItem("trendNovaCart", JSON.stringify(cart));
   showCart();
   updateStockDisplay();
 }
