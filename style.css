@@ -256,6 +256,21 @@ nav a{
   margin: 8px 0;
 }
 
+.order-summary p {
+  color: #222;
+  font-weight: 500;
+}
+
+.order-summary p span {
+  color: #222;
+}
+
+.order-summary #summaryProduct,
+.order-summary #summaryPrice,
+.order-summary #summaryTotal {
+  color: #222;
+  font-weight: bold;
+}
 .order-summary hr {
   border: none;
   border-top: 1px solid #ddd;
