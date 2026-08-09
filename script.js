@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("trendNovaCart")) || [];
 
 let productStock = {
   "Pet Hair Remover Roller": 25,
