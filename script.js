@@ -102,7 +102,6 @@ function addToCart(productName, price) {
   updateCartCount();
 
   alert(productName + " added to cart!");
-
   showCart();
   updateStockDisplay();
 }
@@ -165,8 +164,8 @@ function removeFromCart(index) {
   cart.splice(index, 1);
 
   updateCartCount();
-
   showCart();
+  updateStockDisplay();
 }
 
 
