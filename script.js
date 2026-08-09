@@ -100,6 +100,7 @@ function addToCart(productName, price) {
   }
 
   updateCartCount();
+  localStorage.setItem("trendNovaCart", JSON.stringify(cart));
 
   alert(productName + " added to cart!");
   showCart();
