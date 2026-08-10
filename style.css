@@ -650,3 +650,53 @@ nav a{
     font-size: 14px;
   }
 }
+
+/* =================================
+   SHIPPING POLICY
+================================= */
+
+#shipping-policy {
+  width: 90%;
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  color: #222;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+}
+
+#shipping-policy h2 {
+  color: #111;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+#shipping-policy p {
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+#shipping-policy strong {
+  color: #111;
+}
+
+/* Mobile Shipping Policy */
+
+@media (max-width: 600px) {
+
+  #shipping-policy {
+    width: 92%;
+    padding: 18px;
+  }
+
+  #shipping-policy h2 {
+    font-size: 22px;
+  }
+
+  #shipping-policy p {
+    font-size: 14px;
+  }
+}
