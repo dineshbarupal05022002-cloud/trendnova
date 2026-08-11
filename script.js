@@ -123,36 +123,33 @@ function showCart() {
   let total = 0;
 
   cart.forEach(function (item, index) {
-    total += item.price * item.quantity;
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
 
     html +=
       "<li>" +
-      item.name +
-      " - $" +
-      item.price.toFixed(2) +
-      " × " +
-      item.quantity +
-      " " +
-      "<button onclick='decreaseQuantity(" +
-      index +
-      ")'>➖</button>" +
-      " " +
-      "<button onclick='increaseQuantity(" +
-      index +
-      ")'>➕</button>" +
-      " " +
-      "<button onclick='removeFromCart(" +
-      index +
-      ")'>❌ Remove</button>" +
+      "<div>" +
+      "<strong>" + item.name + "</strong><br>" +
+      "<span>$" + item.price.toFixed(2) + " × " + item.quantity + "</span><br>" +
+      "<strong>Subtotal: $" + itemTotal.toFixed(2) + "</strong>" +
+      "</div>" +
+      "<div>" +
+      "<button onclick='decreaseQuantity(" + index + ")'>➖</button>" +
+      "<button onclick='increaseQuantity(" + index + ")'>➕</button>" +
+      "<button onclick='removeFromCart(" + index + ")'>❌</button>" +
+      "</div>" +
       "</li>";
   });
 
   html += "</ul>";
 
-  html += "<h3>Total: $" + total.toFixed(2) + "</h3>";
+  html +=
+    "<h3>Total: $" +
+    total.toFixed(2) +
+    "</h3>";
 
   html +=
-    "<button onclick='checkout()'>💳 Checkout</button>";
+    "<button onclick='checkout()'>🛍️ Proceed to Checkout</button>";
 
   cartBox.innerHTML = html;
 }
