@@ -73,6 +73,44 @@
   
 <div class="products">
 
+  <div class="card" data-category="home">
+  <span class="sale-badge">SALE</span>
+
+  <img src="pet-cooling-mat.jpg"
+       alt="Pet Cooling Mat"
+       onclick="openModal(
+         'Pet Cooling Mat',
+         '$24.99',
+         'Self-cooling waterproof mat for dogs and cats. Available in L and XL sizes.',
+         'pet-cooling-mat.jpg'
+       )">
+
+  <h3>Pet Cooling Mat</h3>
+
+  <p>⭐⭐⭐⭐⭐</p>
+
+  <p>
+    <del>$34.99</del>
+    <strong>$24.99</strong>
+  </p>
+
+  <label for="cooling-size">Select Size:</label>
+  <select id="cooling-size">
+    <option value="L">L — $24.99</option>
+    <option value="XL">XL — $29.99</option>
+  </select>
+
+  <br><br>
+
+  <button onclick="addCoolingMatToCart()">
+    🛒 Add to Cart
+  </button>
+
+  <button class="checkout-btn" onclick="buyCoolingMat()">
+    🛍️ Buy Now
+  </button>
+  </div>
+
 <div class="card" data-category="home">
  <span class="sale-badge">SALE</span>
  <img src="369bc143-007d-4188-a1e7-72b4b83df799~2.jpg"
