@@ -71,6 +71,59 @@ function updateCartCount() {
 
 
 // ===============================
+// PET COOLING MAT
+// SIZE + COLOR
+// ===============================
+
+function addCoolingMatToCart() {
+  const size = document.getElementById("cooling-size").value;
+  const color = document.getElementById("cooling-color").value;
+
+  let price = size === "L" ? 24.99 : 29.99;
+
+  const productName =
+    "Pet Cooling Mat - " + size + " - " + color;
+
+  const existingItem = cart.find(function (item) {
+    return item.name === productName;
+  });
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({
+      name: productName,
+      price: price,
+      quantity: 1
+    });
+  }
+
+  updateCartCount();
+  localStorage.setItem("trendNovaCart", JSON.stringify(cart));
+
+  alert(productName + " added to cart!");
+  showCart();
+}
+
+
+// ===============================
+// PET COOLING MAT BUY NOW
+// ===============================
+
+function buyCoolingMat() {
+  const size = document.getElementById("cooling-size").value;
+  const color = document.getElementById("cooling-color").value;
+
+  let price = size === "L" ? 24.99 : 29.99;
+
+  const productName =
+    "Pet Cooling Mat - " + size + " - " + color;
+
+  setProduct(productName, "$" + price.toFixed(2));
+}
+
+
+// ===============================
 // ADD TO CART
 // ===============================
 function addToCart(productName, price) {
